@@ -3,18 +3,19 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#424242</item>
+        <item name="colorPrimaryDark">#212121</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowTranslucentStatus">true</item>
-
+    </style>
+    <style name="myNewTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimaryDark">#212121</item>
+    </style>
+    <style name="myStatusTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">#212121</item>
     </style>
     <style name="TitleBarTextAppearance" parent="android:TextAppearance">
         <item name="android:fontFamily">serif</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
-
-
-
-</resources>
+    </resources>

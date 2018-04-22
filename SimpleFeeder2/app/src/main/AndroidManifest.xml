@@ -7,21 +7,32 @@
 
     <application
         android:allowBackup="true"
-
         android:icon="@mipmap/myappicon"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
->        <activity
+        android:theme="@style/myStatusTheme">
+        <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-
+            android:label="@string/app_name"
+            android:theme="@style/myStatusTheme">
         </activity>
+
         <activity
             android:name=".WebActivity"
             android:label="Web"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".SplashActivity" >
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/myStatusTheme" />
+        <activity
+            android:name=".BookmarkActivity"
+            android:label="Bookmarks"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/myStatusTheme" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="About"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/myStatusTheme" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

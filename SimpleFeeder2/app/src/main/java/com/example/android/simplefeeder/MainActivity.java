@@ -1,5 +1,6 @@
 package com.example.android.simplefeeder;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -76,22 +77,41 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id=item.getItemId();
+                Intent intent;
                 switch(id)
                 {
                     case R.id.Home:
-                        Toast.makeText(MainActivity.this,"home",Toast.LENGTH_SHORT).show();
+                        intent=new Intent(MainActivity.this,MainActivity.class);
+                        startActivity(intent);
+                       // Toast.makeText(MainActivity.this,"home",Toast.LENGTH_SHORT).show();
                         item.setChecked(true);
                         break;
                     case R.id.bookmark:
-                        Toast.makeText(MainActivity.this,"bookmark",Toast.LENGTH_SHORT).show();
+                        intent=new Intent(MainActivity.this,BookmarkActivity.class);
+                        startActivity(intent);
+                      //  Toast.makeText(MainActivity.this,"bookmark",Toast.LENGTH_SHORT).show();
                         item.setChecked(true);
                         break;
                     case R.id.about:
-                        Toast.makeText(MainActivity.this,"about",Toast.LENGTH_SHORT).show();
+                        intent=new Intent(MainActivity.this,AboutActivity.class);
+                        startActivity(intent);
+                        //Toast.makeText(MainActivity.this,"about",Toast.LENGTH_SHORT).show();
+                        item.setChecked(true);
+                        break;
+                    case R.id.help:
+                        intent=new Intent(Intent.ACTION_SEND);
+                        intent.setType("plain/text");
+                        intent.setData(Uri.parse("sonamazad98@gmail.com"));
+                        intent.putExtra(Intent.EXTRA_SUBJECT,"Have a query , need some help . write it here .");
+                        intent.putExtra(Intent.EXTRA_EMAIL,"sonamazad98@gmail.com");
+                        intent.setClassName("com.google.android.gm", "com.google.android.gm.ConversationListActivityGmail");
+
+                        startActivity(Intent.createChooser(intent,"sending mail.."));
                         item.setChecked(true);
                         break;
                 }
                 mDrawerLayout.closeDrawers();
+                item.setChecked(false);
                 return true;
             }
         });

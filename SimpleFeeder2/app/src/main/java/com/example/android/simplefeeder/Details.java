@@ -9,18 +9,22 @@ public class Details {
    private String description;
     private String image;
     private String link;
-    public Details(String title,String description,String image,String link)
+    private String date;
+    public Details(String title,String description,String image,String link,String date)
     {
        this.title=title;
         this.description=description;
         this.image=image;
         this.link=link;
+        this.date=date;
     }
 
     public String getTitle() {
         return title;
     }
-
+    public String getDate() {
+        return date;
+    }
     public String getDescription() {
         return description;
     }

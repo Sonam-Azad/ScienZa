@@ -72,6 +72,7 @@ public class ParseXML {
         String description = null;
         String imagelink = null;
         String link = null;
+        String date=null;
 
         while (parser.next() != XmlPullParser.END_DOCUMENT) {
 
@@ -96,7 +97,15 @@ public class ParseXML {
             } else if (name.equals("link")) {
                 link = readText(parser);
                 Log.d("result", link);
-            } else
+            }
+            else if (name.equals("pubDate")) {
+                String temp = readText(parser);
+                Log.d("result", temp);
+                String c[]=temp.split(" ");
+                date=c[1]+" "+c[2]+", "+c[3];
+                Log.d("result", "in pub condition");
+                Log.d("result", date);
+            }else
                 ;
             //  skip(parser);
 
@@ -104,7 +113,7 @@ public class ParseXML {
         Log.d("result", title);
         Log.d("result", description);
         Log.d("result", imagelink);
-        return new Details(title, description, imagelink, link);
+        return new Details(title, description, imagelink, link,date);
 
     }
 
@@ -130,6 +139,7 @@ public class ParseXML {
         parser.nextTag();
         return thumbnailUrl;
     }
+   
 
     public static String readText(XmlPullParser parser) throws XmlPullParserException, IOException {
         String result = "";
