@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent">
 <android.support.v7.widget.Toolbar
-
+    app:titleTextAppearance="@style/TitleBarTextAppearance"
     android:id="@+id/toolbarweb"
     app:title="Web"
     android:layout_width="match_parent"

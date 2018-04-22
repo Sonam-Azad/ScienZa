@@ -13,4 +13,9 @@
     <style name="myStatusTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimaryDark">#212121</item>
     </style>
+    <style name="TitleBarTextAppearance" parent="android:TextAppearance">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
     </resources>
