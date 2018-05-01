@@ -12,6 +12,8 @@ public class DatabaseContract {
         public static final String COLUMN_IMAGEURL="imageurl";
         public static final String COLUMN_URL="url";
         public static final String COLUMN_DATE="date";
+        public static final String COLUMN_STATE="state";
+
 
 
     }

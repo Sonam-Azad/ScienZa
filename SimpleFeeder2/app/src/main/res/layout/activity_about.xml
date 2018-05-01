@@ -24,11 +24,17 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:textSize="16dp"
-        android:text="If someone is taking the time to stop and read your app description, then you have an opportunity to tell them why they should download it. You need to cut straight to the point.
+        android:text="If you are a person who loves to stay up to date with all the current new of science and technology, then this is a perfect place for you, to scroll.
 
-Like an elevator pitch, you need to be succinct and persuasionly a sentence or two displayed by default. Beyond that, potential customers will have to tap more to read on.
 
-The biggest limitations are on the smallest screens, but the vast majority of people browse and download apps directly on their Android smartphones or iPhones."
+
+Developers :
+
+Sonam Azad
+sonamazad98@gmail.com
+
+Srishti Yadav
+srishtiyadav2000@gmail.com"
         />
 
 </LinearLayout>

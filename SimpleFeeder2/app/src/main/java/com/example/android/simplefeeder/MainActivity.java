@@ -99,14 +99,10 @@ public class MainActivity extends AppCompatActivity {
                         item.setChecked(true);
                         break;
                     case R.id.help:
-                        intent=new Intent(Intent.ACTION_SEND);
-                        intent.setType("plain/text");
-                        intent.setData(Uri.parse("sonamazad98@gmail.com"));
-                        intent.putExtra(Intent.EXTRA_SUBJECT,"Have a query , need some help . write it here .");
-                        intent.putExtra(Intent.EXTRA_EMAIL,"sonamazad98@gmail.com");
-                        intent.setClassName("com.google.android.gm", "com.google.android.gm.ConversationListActivityGmail");
-
-                        startActivity(Intent.createChooser(intent,"sending mail.."));
+                        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                                "mailto", "sonamazad98@gmail.com", null));
+                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Need help , write your query here ");
+                       startActivity(Intent.createChooser(emailIntent, null));
                         item.setChecked(true);
                         break;
                 }

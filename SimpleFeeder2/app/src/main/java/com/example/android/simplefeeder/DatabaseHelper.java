@@ -13,9 +13,10 @@ public class DatabaseHelper extends SQLiteOpenHelper
             DatabaseContract.DataBaseEntries.COLUMN_DESCRIPTION+" TEXT ,"+
             DatabaseContract.DataBaseEntries.COLUMN_IMAGEURL+" TEXT ,"+
             DatabaseContract.DataBaseEntries.COLUMN_URL+" TEXT ,"+
-            DatabaseContract.DataBaseEntries.COLUMN_DATE+" TEXT "+")";
+            DatabaseContract.DataBaseEntries.COLUMN_DATE+" TEXT ,"+
+            DatabaseContract.DataBaseEntries.COLUMN_STATE+" INTEGER "+")";
     private static final String DATABASE_NAME="Scienza.db";
-    private static final int DATABASE_VERSION=3;
+    private static final int DATABASE_VERSION=20;
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME,null,DATABASE_VERSION);
     }
